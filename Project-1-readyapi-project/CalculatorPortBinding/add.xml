@@ -11,8 +11,8 @@
    <soapenv:Header/>\r
    <soapenv:Body>\r
       <exam:add>\r
-         <intA>?</intA>\r
-         <intB>?</intB>\r
+         <intA>10</intA>\r
+         <intB>20</intB>\r
       </exam:add>\r
    </soapenv:Body>\r
 </soapenv:Envelope>]]></con:request>
