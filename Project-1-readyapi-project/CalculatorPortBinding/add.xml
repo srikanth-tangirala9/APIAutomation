@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="6f3da41c-9c7d-4bdc-b951-4ab7c9a41041" isOneWay="false" action="" name="add" bindingOperationName="add" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6f3da41c-9c7d-4bdc-b951-4ab7c9a41041fileName">add</con:setting>
+  </con:settings>
+  <con:call id="52e8caa8-9831-45de-affb-50a4b71d2622" name="add Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://calculator-webservice.mybluemix.net/calculator</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://example.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <exam:add>\r
+         <intA>?</intA>\r
+         <intB>?</intB>\r
+      </exam:add>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/Calculator/addRequest"/>
+  </con:call>
+</con:operation>

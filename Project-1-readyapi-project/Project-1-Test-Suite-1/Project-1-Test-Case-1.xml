@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="db23c9e9-317a-44e4-a02d-90ffb13a3dea" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="Project 1 Test Case 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="db23c9e9-317a-44e4-a02d-90ffb13a3deafileName">Project-1-Test-Case-1</con:setting>
+  </con:settings>
+  <con:testStep type="request" id="10adfc62-963e-4318-a1b6-8447dcc08d7c" name="CalculatorPortBinding add-add Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>CalculatorPortBinding</con:interface>
+      <con:operation>add</con:operation>
+      <con:request name="CalculatorPortBinding add-add Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="740aa76a-a6a9-4daf-8ed9-56172f51c42a">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://calculator-webservice.mybluemix.net/calculator</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://example.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <exam:add>
+         <intA>10</intA>
+         <intB>20</intB>
+      </exam:add>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="0e4ce9a1-bb7f-45ab-ae16-ab0df626a2f3" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="f784d81d-f894-43fe-9a26-7ff2f8d59ea3" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="2153101d-caf8-43af-afcc-89aec5008b2e" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="698d1000-ee35-4b80-8fc5-5d6a8d65ca8e" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="c742cc78-ed3b-4761-b21f-0eb817ccf543" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/Calculator/addRequest"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="eb880ddb-e748-4c11-9dfa-08000fb5be03" name="CalculatorPortBinding divide-divide Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>CalculatorPortBinding</con:interface>
+      <con:operation>divide</con:operation>
+      <con:request name="CalculatorPortBinding divide-divide Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="a63cdbc8-2b94-4936-91a1-5d96c474f4e1">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://calculator-webservice.mybluemix.net/calculator</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://example.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <exam:divide>
+         <intA>30</intA>
+         <intB>10</intB>
+      </exam:divide>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="376e9915-c476-4fe2-b662-fd2620231a0e" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="ae9cdf07-2c9c-496b-9242-95b59f78512f" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="852aa53a-5a4f-4f1d-9ca7-675501d8c800" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="90468dd5-84e3-4838-957d-7fa008841e17" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="4f4c112a-37c0-424a-83b4-e4070d223e52" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/Calculator/divideRequest"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="3b66d985-ae51-4f89-afbe-9e326ac25e6e" name="CalculatorPortBinding multiply-multiply Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>CalculatorPortBinding</con:interface>
+      <con:operation>multiply</con:operation>
+      <con:request name="CalculatorPortBinding multiply-multiply Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="42baf936-0366-4ffe-a2f9-57e0c928ebb9">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://calculator-webservice.mybluemix.net/calculator</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://example.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <exam:multiply>
+         <intA>10</intA>
+         <intB>3</intB>
+      </exam:multiply>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="4080ef7c-07b9-4fca-aa65-285831b423c5" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="2fbcc200-dcaf-43cf-9af6-9ca4ae8c6354" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="c1d7aff2-6b59-4b55-ad2b-2bf47d98acdd" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="87eca0ed-cb0f-49e9-8cfa-a2dec738a35f" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="4128fca2-ab2d-4124-9507-c307ee39e8e7" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/Calculator/multiplyRequest"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="request" id="dc9ed596-120f-4e95-8684-df591cf46e5d" name="CalculatorPortBinding subtract-subtract Request">
+    <con:settings/>
+    <con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:interface>CalculatorPortBinding</con:interface>
+      <con:operation>subtract</con:operation>
+      <con:request name="CalculatorPortBinding subtract-subtract Request" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="817cf881-fb6c-40fd-a398-9ecb6e1df885">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>http://calculator-webservice.mybluemix.net/calculator</con:endpoint>
+        <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://example.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <exam:subtract>
+         <intA>20</intA>
+         <intB>10</intB>
+      </exam:subtract>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request>
+        <con:assertion type="SOAP Response" id="59a88a19-c9b5-4b72-8a07-3d53dd467df1" name="SOAP Response"/>
+        <con:assertion type="Valid HTTP Status Codes" id="6d0eb8c5-4fd0-4b33-bec8-b0da2dc62840" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Schema Compliance" id="bf4b9ba8-c4e9-4f4f-be7f-e481cc10a709" name="Schema Compliance">
+          <con:configuration/>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="edb14f54-a7b5-4f65-a0f2-13a5aaed248b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="SOAP Fault Assertion" id="e77afba3-15fe-4cc5-bfd5-de27427aa8ef" name="Not SOAP Fault"/>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/Calculator/subtractRequest"/>
+        <con:wsrmConfig version="1.2"/>
+      </con:request>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

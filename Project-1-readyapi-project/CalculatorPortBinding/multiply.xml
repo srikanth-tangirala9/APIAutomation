@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="9fc05f06-5d74-41df-be1f-09b6497fe4f5" isOneWay="false" action="" name="multiply" bindingOperationName="multiply" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="9fc05f06-5d74-41df-be1f-09b6497fe4f5fileName">multiply</con:setting>
+  </con:settings>
+  <con:call id="64f10063-0e72-48e3-9b94-97a791021334" name="multiply Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://calculator-webservice.mybluemix.net/calculator</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://example.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <exam:multiply>\r
+         <intA>?</intA>\r
+         <intB>?</intB>\r
+      </exam:multiply>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/Calculator/multiplyRequest"/>
+  </con:call>
+</con:operation>

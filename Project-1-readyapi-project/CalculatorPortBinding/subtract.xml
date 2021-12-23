@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="6a620c66-88c6-4a6e-8cb0-15dbfec70118" isOneWay="false" action="" name="subtract" bindingOperationName="subtract" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="6a620c66-88c6-4a6e-8cb0-15dbfec70118fileName">subtract</con:setting>
+  </con:settings>
+  <con:call id="0d8afae1-e176-4a03-9233-5d2b2ce3e9f6" name="subtract Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://calculator-webservice.mybluemix.net/calculator</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://example.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <exam:subtract>\r
+         <intA>?</intA>\r
+         <intB>?</intB>\r
+      </exam:subtract>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/Calculator/subtractRequest"/>
+  </con:call>
+</con:operation>

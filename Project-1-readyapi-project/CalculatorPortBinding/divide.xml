@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:operation id="30be09d3-f8e9-4703-b244-dcf56ef1308e" isOneWay="false" action="" name="divide" bindingOperationName="divide" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="30be09d3-f8e9-4703-b244-dcf56ef1308efileName">divide</con:setting>
+  </con:settings>
+  <con:call id="419c8ea3-a36f-4674-b749-7ed5bbfe9f17" name="divide Request">
+    <con:settings/>
+    <con:encoding>UTF-8</con:encoding>
+    <con:endpoint>http://calculator-webservice.mybluemix.net/calculator</con:endpoint>
+    <con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:exam="http://example.com/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <exam:divide>\r
+         <intA>?</intA>\r
+         <intB>?</intB>\r
+      </exam:divide>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request>
+    <con:wsaConfig mustUnderstand="NONE" version="200508" action="http://example.com/Calculator/divideRequest"/>
+  </con:call>
+</con:operation>
